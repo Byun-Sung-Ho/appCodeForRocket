@@ -7,8 +7,8 @@ on:
     branches: [ "main" ]
 
 env:
-  ECR_URL: ${{ secrets.AWS_ECR_RUL }}
-  ECR_IMAGE: ${{ secrets.AWS_ECT_IMAGE }}
+  ECR_URL: ${{ secrets.AWS_ECR_URL }}
+  ECR_IMAGE: ${{ secrets.AWS_ECR_IMAGE }}
 
 jobs:
   build:
