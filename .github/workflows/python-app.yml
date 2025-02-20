@@ -8,7 +8,7 @@ on:
 
 env:
   ECR_URL: ${{ secrets.AWS_ECR_RUL }}
-  ECR_IMAGE: ${{ secrets.AWS_ECT_IMAGE }}
+  ECR_IMAGE: ${{ secrets.AWS_ECR_IMAGE }}
 
 jobs:
   build:
@@ -40,7 +40,7 @@ jobs:
 
       # 5. Docker 이미지 빌드
       - name: Docker Image Build
-        run: docker build -t ${{ secrets.AWS_ECR_IMAGE }} .
+        run: docker build -t ${{ env.ECR_IMAGE }} .
 
       # 6. 새 태그 부여 (GitHub Run Number 사용)
       - name: Tag image with new version
